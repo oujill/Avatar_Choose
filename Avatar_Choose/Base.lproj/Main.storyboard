@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHy-LH-6YX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,312 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Avatar_Choose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hoodie" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-Ul-0QP" userLabel="Body Image">
+                                <rect key="frame" x="60" y="296" width="266" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Afro" translatesAutoresizingMaskIntoConstraints="NO" id="h4K-L6-e1Q">
+                                <rect key="frame" x="74" y="163" width="266" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hectic" translatesAutoresizingMaskIntoConstraints="NO" id="akH-Fj-KWh" userLabel="Face Image">
+                                <rect key="frame" x="177" y="219" width="81" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="rT5-dS-gCK" userLabel="Accessory Image">
+                                <rect key="frame" x="157" y="225" width="100" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KCy-uo-yX3">
+                                <rect key="frame" x="0.0" y="451" width="414" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Head"/>
+                                    <segment title="Face"/>
+                                    <segment title="Body"/>
+                                    <segment title="Accessory"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choose_segment:" destination="BYZ-38-t0r" eventType="valueChanged" id="i4K-LO-k4V"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBU-S3-z2B" userLabel="AccessoryView">
+                                <rect key="frame" x="0.0" y="481" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTC-Bh-kjb" userLabel="Glasses 2">
+                                        <rect key="frame" x="324" y="18" width="82" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Glasses 2"/>
+                                        <connections>
+                                            <action selector="show_accessoryImage4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tO6-a6-i6q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-Be-09y" userLabel="Sunglasses">
+                                        <rect key="frame" x="223" y="18" width="82" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Sunglasses"/>
+                                        <connections>
+                                            <action selector="show_accessoryImage3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6M-9a-MSX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNL-Rq-ESe" userLabel="Glasses 5">
+                                        <rect key="frame" x="118" y="18" width="82" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Glasses 5"/>
+                                        <connections>
+                                            <action selector="show_accessoryImage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDZ-N1-3zZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVK-G5-q8M" userLabel="Glasses 3">
+                                        <rect key="frame" x="8" y="18" width="82" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Glasses 3"/>
+                                        <connections>
+                                            <action selector="show_accessoryImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="at2-pl-n4G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-fr-ac9" userLabel="BodyView">
+                                <rect key="frame" x="0.0" y="481" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQI-Yr-AQw" userLabel="Hoodie">
+                                        <rect key="frame" x="324" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Hoodie"/>
+                                        <connections>
+                                            <action selector="show_bodyImage4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJT-Qi-Efb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYP-eO-iIH" userLabel="Blazer-Black-Tee">
+                                        <rect key="frame" x="218" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Blazer-Black-Tee"/>
+                                        <connections>
+                                            <action selector="show_bodyImage3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0d-hi-Ae0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKS-9R-8Pp" userLabel="Button-Shirt-1">
+                                        <rect key="frame" x="115" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Button-Shirt-1"/>
+                                        <connections>
+                                            <action selector="show_bodyImage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAR-9V-mNz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moV-P2-ZRt" userLabel="Gaming">
+                                        <rect key="frame" x="8" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Gaming"/>
+                                        <connections>
+                                            <action selector="show_bodyImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5BI-95-aE0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCh-xd-haI" userLabel="FaceView">
+                                <rect key="frame" x="0.0" y="481" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvw-iB-igb" userLabel="Hectic">
+                                        <rect key="frame" x="324" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Hectic"/>
+                                        <connections>
+                                            <action selector="show_faceImage4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAB-IJ-I6q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6Y-9e-fCV" userLabel="Angry with Fang">
+                                        <rect key="frame" x="218" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Angry-with-Fang"/>
+                                        <connections>
+                                            <action selector="show_faceImage3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fb4-qe-1KN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPS-o0-8uf" userLabel="Awe">
+                                        <rect key="frame" x="115" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Awe"/>
+                                        <connections>
+                                            <action selector="show_faceImage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sF-k6-IeP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-FZ-419" userLabel="Smile-LOL">
+                                        <rect key="frame" x="8" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Smile-LOL"/>
+                                        <connections>
+                                            <action selector="show_faceImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaO-kQ-7D3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5J-Xi-jt9" userLabel="HeadView">
+                                <rect key="frame" x="0.0" y="481" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-Qz-oNc" userLabel="Afro">
+                                        <rect key="frame" x="324" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Afro"/>
+                                        <connections>
+                                            <action selector="show_headImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w6R-bg-oSP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-5m-OVX" userLabel="Bangs">
+                                        <rect key="frame" x="218" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Bangs"/>
+                                        <connections>
+                                            <action selector="show_headImage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9e-bT-t6o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URA-vL-N3n" userLabel="Bantu Knots">
+                                        <rect key="frame" x="115" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Bantu Knots"/>
+                                        <connections>
+                                            <action selector="show_headImage3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwD-KF-FOJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwb-15-QBP" userLabel="Bangs 2">
+                                        <rect key="frame" x="8" y="18" width="82" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Bangs 2"/>
+                                        <connections>
+                                            <action selector="show_headImage4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAq-DF-Ugp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zvp-Xe-IWq">
+                        <barButtonItem key="rightBarButtonItem" title="Continue" id="dfS-bX-vWu">
+                            <color key="tintColor" red="0.23921568630000001" green="0.2666666667" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="nUc-7b-CWT" kind="show" id="RrW-2D-ybE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accessoryImage" destination="rT5-dS-gCK" id="7cB-ar-fGZ"/>
+                        <outlet property="accessoryView" destination="EBU-S3-z2B" id="QpT-f2-xmX"/>
+                        <outlet property="bodyImage" destination="IPC-Ul-0QP" id="GOF-UV-faL"/>
+                        <outlet property="bodyView" destination="jLL-fr-ac9" id="xRZ-Iz-9Dp"/>
+                        <outlet property="faceImage" destination="akH-Fj-KWh" id="jDm-ht-5e6"/>
+                        <outlet property="faceView" destination="OCh-xd-haI" id="j8f-xf-WnI"/>
+                        <outlet property="headImage" destination="h4K-L6-e1Q" id="mpT-Ra-UyR"/>
+                        <outlet property="headView" destination="A5J-Xi-jt9" id="Q4J-wb-X2I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fxc-PP-xlA">
+            <objects>
+                <viewController id="nUc-7b-CWT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Tf-3i-C4j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hfv-49-YAp">
+                                <rect key="frame" x="131" y="376" width="152" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oky-kH-4TH">
+                                <rect key="frame" x="143" y="306" width="128" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rLL-gb-cVU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7m6-bM-rKD">
+                        <barButtonItem key="rightBarButtonItem" title="Show" id="wjG-mD-bBV">
+                            <color key="tintColor" red="0.2385132157" green="0.26497393029999999" blue="0.36719096480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="Hby-kt-cfp" kind="show" id="bA0-0Q-YXZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDr-xR-ahq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781.1594202898552" y="123.88392857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kVi-rS-JwE">
+            <objects>
+                <viewController id="Hby-kt-cfp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FA2-qh-Dsm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Whg-CK-D6k"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Y8-sQ-JQu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9c-Ry-1fl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AKU-j5-V2u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cHy-LH-6YX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="chB-5t-l3g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JT2-Fo-hob"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqc-Y7-c1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Afro" width="355" height="426"/>
+        <image name="Angry-with-Fang" width="217" height="220"/>
+        <image name="Awe" width="217" height="220"/>
+        <image name="Bangs" width="355" height="426"/>
+        <image name="Bangs 2" width="355" height="426"/>
+        <image name="Bantu Knots" width="355" height="426"/>
+        <image name="Blazer-Black-Tee" width="614" height="550"/>
+        <image name="Button-Shirt-1" width="614" height="550"/>
+        <image name="Gaming" width="614" height="550"/>
+        <image name="Glasses 2" width="295" height="104"/>
+        <image name="Glasses 3" width="295" height="104"/>
+        <image name="Glasses 5" width="295" height="104"/>
+        <image name="Hectic" width="217" height="220"/>
+        <image name="Hoodie" width="614" height="550"/>
+        <image name="Smile-LOL" width="217" height="220"/>
+        <image name="Sunglasses" width="295" height="104"/>
+    </resources>
 </document>
